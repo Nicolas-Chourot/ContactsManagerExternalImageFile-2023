@@ -2,6 +2,7 @@
 
 include_once 'models/records.php';
 include_once 'utilities/guid.php';
+include_once 'utilities/formUtilities.php';
 include_once 'utilities/imageFiles.php';
 
 const ContactsFile = "data/contacts.data";
@@ -52,7 +53,9 @@ class Contact extends Record
     }
     public static function compare($contact_a, $contact_b)
     {
-        return strcmp($contact_a->Name(), $contact_b->Name());
+        $string_a = no_Hyphens($contact_a->Name());
+        $string_b = no_Hyphens($contact_b->Name());
+        return strcmp($string_a, $string_b);
     }
 }
 
