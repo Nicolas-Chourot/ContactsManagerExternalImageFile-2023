@@ -1,6 +1,33 @@
 <?php
 require 'utilities/formUtilities.php';
 
+/*
+    This class purpose is to generalize model class. Each derived class must respect the following rules :
+
+    - Each member must have a read and a write accessor
+
+    example :
+
+        private $member;
+
+        public function Member() 
+        {
+            return $this->member;
+        }
+        public function setMember($value) 
+        {
+            // eventually apply some validation on $value
+            $this->membre = $value;
+        }
+    - The compare method must be overriden
+
+    example :
+
+        public static function compare($data_a, $data_b)
+        {
+            return strcmp($data_a->Member(), $data_b->Member());
+        }
+*/
 abstract class Record
 {
     protected $id;

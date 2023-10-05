@@ -52,10 +52,9 @@ class Contact extends Record
     }
     public static function compare($contact_a, $contact_b)
     {
-        return strcmp($contact_a->name(), $contact_b->name());
+        return strcmp($contact_a->Name(), $contact_b->Name());
     }
 }
-
 
 class ContactsFile extends Records
 {
