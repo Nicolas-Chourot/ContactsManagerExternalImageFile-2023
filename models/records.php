@@ -170,7 +170,6 @@ class Records
         }
         return false;
     }
-
     public function toArray()
     {
         $records = [];
