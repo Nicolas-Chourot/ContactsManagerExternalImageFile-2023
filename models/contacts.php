@@ -57,6 +57,9 @@ class Contact extends Record
         $string_b = no_Hyphens($contact_b->Name());
         return strcmp($string_a, $string_b);
     }
+    static function keyCompare($contact_a, $contact_b) {
+        self::compare($contact_a, $contact_b);
+    }
 }
 
 class ContactsFile extends Records

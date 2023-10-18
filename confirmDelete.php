@@ -48,10 +48,8 @@ if (!$error) {
         </div>
     HTML;
 }
-$viewScript= "js/validation.js";
-$localScript = <<<HTML
+$viewScript = <<<HTML
     <script defer>
-       initFormValidation();
        $("#createContactCmd").hide();
        $("#abortCmd").show();
     </script>

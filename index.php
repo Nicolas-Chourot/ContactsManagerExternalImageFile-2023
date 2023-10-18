@@ -29,11 +29,10 @@ foreach ($list as $contact) {
     HTML;
     $viewContent = $viewContent . $contactHTML;
 }
-$localScript = <<<HTML
+$viewScript = <<<HTML
 <script defer>
    $("#createContactCmd").show();
    $("#abortCmd").hide();
-   
    restoreContentScrollPosition();
 </script>
 HTML;

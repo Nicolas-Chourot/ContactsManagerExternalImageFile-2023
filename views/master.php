@@ -21,9 +21,6 @@ $scriptsBundle = "";
 if (file_exists("views/scriptsBundle.html"))
     $scriptsBundle = file_get_contents("views/scriptsBundle.html");
 
-if (file_exists($viewScript))
-    $viewScript = "<script>" . file_get_contents($viewScript) . "</script>";
-
 echo <<<HTML
     <!DOCTYPE html>
     <html>
@@ -45,7 +42,6 @@ echo <<<HTML
         </div>
         $scriptsBundle
         $viewScript
-        $localScript
     </body>
     </html>
     HTML;

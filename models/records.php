@@ -1,5 +1,4 @@
 <?php
-require 'utilities/formUtilities.php';
 
 /*
     This class purpose is to generalize model class. Each derived class must respect the following rules :
@@ -56,6 +55,7 @@ abstract class Record
         return $this->id;
     }
     abstract protected static function compare($record_a, $record_b);
+    abstract protected static function keyCompare($record_a, $record_b);
 }
 
 class Records 
@@ -213,7 +213,7 @@ class Records
             $className = get_class($this->_records[0]);
             foreach ($this->_records as $contact) {
                 if (
-                    $className::compare($contact, $recordToFind) == 0 &&
+                    $className::keyCompare($contact, $recordToFind) == 0 &&
                     $contact->Id() != $recordToFind->Id()
                 )
                     return true;

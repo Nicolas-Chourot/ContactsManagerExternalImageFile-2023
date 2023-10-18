@@ -89,8 +89,8 @@ if (!$error) {
         </div>
     HTML;
 }
-$viewScript = "js/validation.js";
-$localScript = <<<HTML
+$viewScript = <<<HTML
+    <script src="js/Validation.js"></script>
     <script src="js/ImageControl.js"></script>
     <script defer>
        //initFormValidation();
