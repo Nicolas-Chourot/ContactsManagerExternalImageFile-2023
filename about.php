@@ -16,7 +16,7 @@ $viewContent = <<<HTML
         </p>
     </div>
 HTML;
-$localScript = <<<HTML
+$viewScript = <<<HTML
     <script defer>
        $("#createContactCmd").hide();
        $("#abortCmd").show();
